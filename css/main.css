@@ -1,0 +1,438 @@
+/* Reset */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Navbar */
+
+.navbar-brand img{
+    width: 250px;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    display: block;
+}
+
+/* estilo de texto/fuente */
+
+body{
+    font-family: 'Dosis', sans-serif;
+    background-color: rgb(221, 217, 217);
+}
+
+
+/* Animaciones */
+
+nav ul li a:hover{
+    font-size: 20px;
+}
+
+h1:hover{
+    color: rgb(110, 17, 17);
+}
+
+/* h1 */
+
+h1{
+    padding: 1rem;
+    text-align: center;
+    text-transform: uppercase;
+    text-decoration: underline;
+}
+
+/* h2 index titulo */
+
+.subTitulo{
+    padding: .5rem;
+    text-align: center;
+    color: rgb(134, 126, 126);
+    font-size: 20px;
+}
+
+/* footer */
+
+footer p{
+    text-align: left;
+}
+
+/* main index */
+
+.mainNosotros{
+    height: 140vh;
+    display: grid;
+    grid-template-areas:"mainP mainP"
+                        "imagenUno imagenDos"
+                        "imagenTres imagenCuatro"
+                        "parrafo parrafo";
+    justify-content: center;
+    justify-items: center;
+    gap: 2.2rem;
+}
+
+.sectionNosotros{
+    display: none;
+}
+
+.contenidoPresupuesto{
+    grid-area: contenidoPresupuesto;
+}
+
+.mainP{
+    justify-content:center;
+    grid-area: mainP;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.mainP span{
+    color: rgb(110, 17, 17);
+}
+
+.imagenUno{
+    grid-area: imagenUno;
+}
+
+.imagenDos{
+    grid-area: imagenDos;
+}
+
+.imagenTres{
+    grid-area: imagenTres;
+}
+
+.imagenCuatro{
+    grid-area: imagenCuatro;
+}
+
+.parrafo{
+    grid-area: parrafo;
+    font-size: 1.2rem;
+}
+
+div img{
+    width: 70%;
+}
+
+.imgUno{
+    border-radius: 2rem;
+}
+
+.imgDos{
+    border-radius: 2rem;
+}
+
+.imgTres{
+    border-radius: 2rem;
+}
+
+.imgCuatro{
+    border-radius: 2rem;
+}
+
+
+
+/* media queries index */
+
+@media screen and (min-width:600px) {
+
+    nav ul{
+        display: flex;
+        justify-content: center;
+        gap: 1.5rem;
+    }
+
+    .sectionNosotros{
+        display: flex;
+        grid-area: img;
+    }
+
+    .mainNosotros{
+        grid-template-areas:"mainP mainP mainP mainP"
+                            "img img img img"
+                            "imagenUno imagenDos imagenTres imagenCuatro"
+                            "parrafo parrafo parrafo parrafo";
+        column-gap: 2rem;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    nav{
+        margin: 1rem;
+    }
+
+    .mainNosotros{
+        grid-template-areas:"mainP mainP img img"
+                            "imagenUno imagenDos imagenTres imagenCuatro"
+                            "parrafo parrafo parrafo parrafo";
+        column-gap: 2rem;
+        align-items: center;
+    }
+}
+
+/* main sobrenosotros */
+
+.logoEmpresa{
+    display: flex;
+    width: 700px;
+    height: auto;
+    margin: auto;
+    padding: 20px;
+    justify-content: center;
+}
+
+.mainSobrenosotros{
+    height: 140vh;
+    display: grid;
+    grid-template-areas:"mainS"
+                        "textoUno"
+                        "textoDos"
+                        "imagenLogo";
+    justify-content: center;
+    justify-items: center;
+    gap: 2.2rem;
+}
+
+.mainS{
+    grid-area: mainS;
+}
+
+.textoUno{
+    grid-area: textoUno;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.textoDos{
+    grid-area: textoDos;
+    justify-content: center;
+    text-align: center;
+    font-size: 1.2rem;
+}
+
+.imagenLogo{
+    grid-area: imagenLogo;
+}
+
+/* media queries Sobrenosotros */
+
+@media screen and (min-width: 1024px){
+    .mainSobrenosotros{
+        grid-template-areas:"mainS mainS"
+                            "textoUno textoDos"
+                            "imagenLogo imagenLogo";
+    }
+}
+
+
+/* main Servicios */
+
+.mainServicios{
+    height: 120vh;
+    display: grid;
+    grid-template-areas:"titUno"
+                        "parrafoUno"
+                        "titDos"
+                        "parrafoDos"
+                        "titTres"
+                        "parrafoTres"
+                        "titCuatro"
+                        "parrafoCuatro";
+    justify-content: center;
+    justify-items: center;
+}
+
+.titUno{
+    grid-area: titUno;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.parrafoUno{
+    grid-area: parrafoUno;
+    width: 100%;
+}
+
+.titDos{
+    grid-area: titDos;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.parrafoDos{
+    grid-area: parrafoDos;
+    width: 100%;
+}
+
+.titTres{
+    grid-area: titTres;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.parrafoTres{
+    grid-area: parrafoTres;
+    width: 100%;
+}
+
+.titCuatro{
+    grid-area: titCuatro;
+    width: 100%;
+    text-decoration: underline;
+}
+
+.parrafoCuatro{
+    grid-area: parrafoCuatro;
+    width: 100%;
+}
+
+/* media queries Servicios */
+
+
+@media screen and (min-width: 1024px){
+    .mainServicios{
+        grid-template-areas:"titUno titDos"
+                            "parrafoUno parrafoDos"
+                            "titTres titCuatro"
+                            "parrafoTres parrafoCuatro";
+    }
+
+    .titUno{
+        width: auto;
+        text-align: center;
+    }
+    
+    .parrafoUno{
+        width: 500px;
+        text-align: center;
+    }
+    
+    .titDos{
+        width: auto;
+        text-align: center;
+    }
+    
+    .parrafoDos{
+        width: 500px;
+        text-align: center;
+    }
+    
+    .titTres{
+        width: auto;
+    }
+    
+    .parrafoTres{
+        width: 500px;
+        text-align: center;
+    }
+    
+    .titCuatro{
+        width: auto;
+    }
+    
+    .parrafoCuatro{
+        width: 500px;
+        text-align: center;
+    }
+}
+
+
+
+/* main motorhomes */
+
+.mainM{
+    height: 200vh;
+    display: grid;
+    grid-template-areas:"descripcionM"
+                        "imgMUno"
+                        "imgMDos"
+                        "imgMTres"
+                        "imgMCuatro";
+    justify-content: center;
+    justify-items: center;
+    gap:2rem;
+}
+
+.descripcionM{
+    grid-area: descripcionM;
+}
+
+.imgMUno{
+    grid-area: imgMUno;
+    border-radius: 20%;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.imgMDos{
+    grid-area: imgMDos;
+    border-radius: 20%;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.imgMTres{
+    grid-area: imgMTres;
+    border-radius: 20%;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    padding: 1rem;
+}
+
+.imgMCuatro{
+    grid-area: imgMCuatro;
+    border-radius: 20%;
+    display: flex;
+    width: 100%;
+    height: 20%;
+    justify-content: center;
+    padding: 1rem;
+}
+
+main div ul li{
+    list-style: none;
+    justify-content: left;
+    padding: .3rem;
+}
+
+/* media queries Motorhomes */
+
+@media screen and (min-width: 600px){
+    .mainM{
+        grid-template-areas:"descripcionM descripcionM"
+                            "imgMUno imgMDos"
+                            "imgMTres imgMCuatro";
+    }
+    
+    .imgMUno{
+        width: 500px;
+        height: auto;
+    }
+
+    .imgMDos{
+        width: 500px;
+        height: auto;
+    }
+
+    .imgMTres{
+        width: 500px;
+        height: auto;
+    }
+
+    .imgMCuatro{
+        width: 500px;
+        height: auto;
+    }
+}
